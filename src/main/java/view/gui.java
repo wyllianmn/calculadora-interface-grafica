@@ -223,7 +223,7 @@ public class gui extends javax.swing.JFrame {
             
             JTFResultado.setText("resultado: "+ resultado);
             
-            JTAHistorico.append(num1 + "/" + num2 +" = " + resultado + "\n");
+            JTAHistorico.append(num1 + " / " + num2 +" = " + resultado + "\n");
             
         }
         catch(NumberFormatException ex){
@@ -272,7 +272,7 @@ public class gui extends javax.swing.JFrame {
             
             JTFResultado.setText("resultado: "+ resultado);
             
-            JTAHistorico.append(num1 + "/" + num2 +" = " + resultado + "\n");
+            JTAHistorico.append(num1 + " x " + num2 +" = " + resultado + "\n");
             
         }
         catch(NumberFormatException ex){
@@ -302,7 +302,7 @@ public class gui extends javax.swing.JFrame {
             
             JTFResultado.setText("resultado: "+ resultado);
             
-            JTAHistorico.append(num1 + "/" + num2 +" = " + resultado + "\n");
+            JTAHistorico.append(num1 + " + " + num2 +" = " + resultado + "\n");
             
         }
         catch(NumberFormatException ex){
@@ -330,7 +330,7 @@ public class gui extends javax.swing.JFrame {
             
             JTFResultado.setText("resultado: "+ resultado);
             
-            JTAHistorico.append(num1 + "/" + num2 +" = " + resultado + "\n");
+            JTAHistorico.append(num1 + " - " + num2 +" = " + resultado + "\n");
             
         }
         catch(NumberFormatException ex){
