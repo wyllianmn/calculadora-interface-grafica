@@ -287,10 +287,58 @@ public class gui extends javax.swing.JFrame {
 
     private void ButtonSomarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSomarActionPerformed
         // TODO add your handling code here:
+        if(JTFValor1.getText().trim().isEmpty() || JTFValor2.getText().trim().isEmpty()){
+            JTFResultado.setText("Preencha todos os campos");
+            JTAHistorico.setText("preencha todos os campos");
+            JTFValor1.requestFocus();
+            return;
+        }
+        try{
+            double num1 = Double.parseDouble(JTFValor1.getText());
+            double num2 = Double.parseDouble(JTFValor2.getText());
+            
+            Calculadoraa calculadora = new Calculadoraa();
+            double resultado = calculadora.somar(num1,num2);
+            
+            JTFResultado.setText("resultado: "+ resultado);
+            
+            JTAHistorico.append(num1 + "/" + num2 +" = " + resultado + "\n");
+            
+        }
+        catch(NumberFormatException ex){
+            JTFResultado.setText("digite apenas valor numerico");
+        }
+        catch(ArithmeticException ex){
+            JTFResultado.setText(ex.getMessage());
+        }
     }//GEN-LAST:event_ButtonSomarActionPerformed
 
     private void ButtonSubtrair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSubtrair1ActionPerformed
         // TODO add your handling code here:
+        if(JTFValor1.getText().trim().isEmpty() || JTFValor2.getText().trim().isEmpty()){
+            JTFResultado.setText("Preencha todos os campos");
+            JTAHistorico.setText("preencha todos os campos");
+            JTFValor1.requestFocus();
+            return;
+        }
+        try{
+            double num1 = Double.parseDouble(JTFValor1.getText());
+            double num2 = Double.parseDouble(JTFValor2.getText());
+            
+            Calculadoraa calculadora = new Calculadoraa();
+            double resultado = calculadora.subtrair(num1,num2);
+            
+            JTFResultado.setText("resultado: "+ resultado);
+            
+            JTAHistorico.append(num1 + "/" + num2 +" = " + resultado + "\n");
+            
+        }
+        catch(NumberFormatException ex){
+            JTFResultado.setText("digite apenas valor numerico");
+        }
+        catch(ArithmeticException ex){
+            JTFResultado.setText(ex.getMessage());
+        }
     }//GEN-LAST:event_ButtonSubtrair1ActionPerformed
 
     /**
